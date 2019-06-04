@@ -74,7 +74,7 @@ nvar=dimsizes(varname)
   spcx_data&latitude=latitude
   spcx_data&longitude=longitude
 
-  OutputFileName="Spectrum_anal_of_"+varname(i)+"_"+model+"_from_"+Startyr+"-"+Endyr
+  OutputFileName="Spectrum_anal_of_"+varname(i)+"_"+model+"_"+runner(j)+"_from_"+Startyr+"-"+Endyr
   system("rm -rf "+OutputFileName+"_at_gridcell.nc")
   fout=addfile(OutputFileName+"_at_gridcell.nc","c")
   fout->$varname(i)$=spcx_data
